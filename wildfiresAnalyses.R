@@ -88,12 +88,12 @@ fireData$containmentDatetime <- as.POSIXct(fireData$containmentDatetime)
 #nrow(nullCause)
 
 # Create the AppEEARS data-request files
-for (i in c(2011:2015)){
-	as.character(i)
-	write.table(fireData[format(fireData$discoveryDate, "%Y") == as.character(i),
-		  c("latitude", "longitude")],
-		  file = paste("AppEEARS_request_", i-1, ".csv", sep=""),
-		  sep = ",")
-}
+#for (i in c(2011:2015)){
+#	as.character(i)
+#	write.table(fireData[format(fireData$discoveryDate, "%Y") == as.character(i),
+#		  c("id", "latitude", "longitude")],
+#		  file = paste("AppEEARS_request_", i-1, ".csv", sep=""),
+#		  sep = " ")
+#}
 
 dbDisconnect(con)
